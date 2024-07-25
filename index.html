@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+   
+    <div class="container">
+        <h1 class="loading-heading"></h1>
+        <div class="sub-info">
+            <p>Welcome my online resume. I am a Full stack Software engineer, proficient in Python,
+                JavaScript, HTML, CSS and C. More about me below!
+            </p>
+            <button id="About-button">ABOUT ME</button>
+        </div>
+        <div class="overlay"></div>
+    </div>
+    <section class="About-section">
+        <h1 class="sub-headings">ABOUT ME</h1>
+        <div class="about-info">
+            <div class="more-about">
+                <p class="Bio">
+                    I am a highly motivated individual with a passion for learning and a strong work ethic. I have a knack for problem solving and pay close attention to detail. I have a great understanding of programming and programming languages, and have shown great progress throughout my academic career so far.
+                </p>
+
+                <p class="Bio">
+                    My goal is to become a professional software engineer and innovate the future. I am well aware of the challenges that come with the career path, but i am determined to overcome these challenges, because the only way to reach success is to do hard things. I am eager to put my skills to use in a real-world setting and learn from experienced professionals in the field.
+                </p>
+
+                <p class="Bio">
+                    I recognize the importance of staying up-to-date with the latest technologies and industry trends. I am committed to continuous learning and development, and actively look for opportunities to improve my skills and expand my knowledge.
+                </p>
+
+                <p class="Bio">
+                    I am a team player and can collaborate well with others, and able to express great leadership. I value feedback and I am always looking for ways to improve my work
+                </p>
+                <button id="projects-button">My Projects</button>
+            </div>
+            <img id="Profile-picture" src="https://media.licdn.com/dms/image/D4D03AQHyzrLrHHeRbA/profile-displayphoto-shrink_800_800/0/1717699108446?e=1724284800&v=beta&t=3w9M2WUEvXNwjhNeIs3OeumdvBGpeTjkmRaOBHZHrns">
+        </div>
+    </section>
+    <section class="Skills-section">
+        <h1 class="sub-headings">MY SKILLS</h1>
+        <div class="skills-icons">
+            <div class="skill">
+                <i class="fas fa-users skill-icon"></i>
+                <h3 class="skill-title">Team Player</h3>
+            </div>
+            <div class="skill">
+                <i class="fas fa-bolt skill-icon"></i>
+                <h3 class="skill-title">Motivated</h3>
+            </div>
+            <div class="skill">
+                <i class="fas fa-chart-line skill-icon"></i>
+                <h3 class="skill-title">Analytical</h3>
+            </div>
+        </div>
+        <div class="skills-info">
+            <h2>Web Development</h2>
+            <ul>
+                <li>Proficient in creating websites with HTML, JavaScript, and CSS</li>
+                <li>Adept at designing user-friendly UI/UX designs</li>
+                <li>Also able to express knowledge on design principals, even on a no-code environment</li>
+            </ul>
+            <h2>Programming Languages</h2>
+            <ul>
+                <li>Skilled in Python, particularly in developing algorithms and handling data-related tasks</li>
+                <li>Proficient in C programming language</li>
+            </ul>
+            <h2>Technical Competencies</h2>
+            <ul>
+                <li>Capable of comprehending and implementing complex algorithms</li>
+                <li>Meticulous attention to detail</li>
+            </ul>
+            <h2>Soft Skills</h2>
+            <ul>
+                <li>Effective team player and collaborator</li>
+                <li>Excellent time management skills</li>
+                <li>Always eager to learn new technologies and methodologies</li>
+            </ul>
+        </div>
+    </section>
+    <section class="projects-section">
+        <h1 class="sub-headings">My Projects</h1>
+    </section>
+    <section class="contact-section">
+        <h1 id="Contact-heading">CONTACTS</h1>
+        <div class="My-Info">
+            <div id="contact-info">
+                <p><i class="fas fa-envelope"></i> matolagarnet@gmail.com</p>
+                <p><i class="fas fa-phone"></i> +27 73 668 6126</p>
+            </div>
+            <div class="social-links">
+                <a href="https://www.instagram.com/itz_garneyy20" target="_blank"><i class="fab fa-instagram"></i></a>
+                <a href="https://www.linkedin.com/in/garnetmatola" target="_blank"><i class="fab fa-linkedin"></i></a>
+                <a href="https://twitter.com/GarnetMatola" target="_blank"><i class="fab fa-twitter"></i></a>
+                <a href="https://github.com/CallmeJimmy18" target="_blank"><i class="fab fa-github"></i></a>
+            </div>
+        </div>
+        <div class="contact-overlay"></div>
+    </section>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+        const heading = document.querySelector('.loading-heading');
+        heading.textContent = 'Hi there I\'m Garnet Matola';
+        });
+
+        document.addEventListener('DOMContentLoaded', function() {
+            const aboutSection = document.querySelector('.About-section');
+            const aboutButton = document.getElementById('About-button');
+
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        aboutSection.classList.add('visible');
+                        observer.unobserve(aboutSection);
+                    }
+                });
+            }, { threshold: 0.1 });
+
+            observer.observe(aboutSection);
+            aboutButton.addEventListener('click', function() {
+                aboutSection.scrollIntoView({ behavior: 'smooth' });
+            });
+        });
+
+        document.addEventListener('DOMContentLoaded', function() {
+            const skillIcons = document.querySelector('.skills-icons')
+
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        skillIcons.classList.add('visible');
+                        observer.unobserve(skillIcons);
+                    }
+                });
+            }, { threshold: 0.1 });
+
+            observer.observe(skillIcons);
+        })
+
+        document.getElementById('projects-button').addEventListener('click', () => {
+            window.location.href = 'projects.html'; // Replace 'projects.html' with the actual path to your projects page
+        });
+
+        document.addEventListener("DOMContentLoaded", function() {
+            const sections = document.querySelectorAll('.skills-info h2, .skills-info ul');
+
+            const observer = new IntersectionObserver((entries, observer) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('visible');
+                        observer.unobserve(entry.target); // Stop observing once the element is visible
+                    }
+                });
+            }, { threshold: 0.1 });
+
+            sections.forEach(section => {
+                observer.observe(section);
+            });
+        });
+    </script>
+</body>
+</html>
