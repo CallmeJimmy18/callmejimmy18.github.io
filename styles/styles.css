@@ -167,7 +167,7 @@ a {
     font-size: 1.8em;
     position: relative;
     margin-right: 25px;
-    color: #ffffff; /* Change color as needed */
+    color: #ffffff; 
     text-decoration: none;
     z-index: 2;
 }
@@ -302,30 +302,30 @@ a {
 
 
 .skills-info h2 {
-    margin-top: 30px; /* Space above each heading */
-    font-size: 1.7em; /* Size of the headings */
+    margin-top: 30px; 
+    font-size: 1.7em;
     font-family: Arial;
     font-weight: bold;
-    color: rgb(255, 255, 255); /* Color of the headings */
-    text-align: left; /* Align the headings to the left */
+    color: rgb(255, 255, 255);
+    text-align: left;
     opacity: 0;
     transform: translateX(-100%);
     transition: opacity 0.5s ease-out, transform 0.5s ease-out;
 }
 
 .skills-info ul {
-    list-style-type: disc; /* Default bullet points */
-    margin-left: 20px; /* Indent the list */
-    text-align: left; /* Align the list to the left */
-    padding-left: 20px; /* Add padding to the left */
+    list-style-type: disc; 
+    margin-left: 20px; 
+    text-align: left; 
+    padding-left: 20px;
     opacity: 0;
     transform: translateX(-100%);
     transition: opacity 0.5s ease-out, transform 0.5s ease-out;
 }
 
 .skills-info li {
-    margin-bottom: 10px; /* Space between each list item */
-    font-size: 1.2em; /* Slightly larger font size for readability */
+    margin-bottom: 10px;
+    font-size: 1.2em;
     font-family: Arial;
     color: #ffffff;
 }
@@ -437,7 +437,7 @@ a {
 .certificates-section {
     margin-top: 50px;
     padding: 20px;
-    background-color: #f9f9f9; /* Example background color */
+    background-color: #f9f9f9;
 }
 
 .certificates-section .sub-headings {
