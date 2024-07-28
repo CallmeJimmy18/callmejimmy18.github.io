@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>Resume</title>
+    <link rel="stylesheet" href="styles/styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
@@ -38,13 +38,13 @@
                 <p class="Bio">
                     I am a team player and can collaborate well with others, and able to express great leadership. I value feedback and I am always looking for ways to improve my work
                 </p>
-                <button id="projects-button">My Projects</button>
+                <button id="projects-button">GitHub Projects</button>
             </div>
             <img id="Profile-picture" src="https://media.licdn.com/dms/image/D4D03AQHyzrLrHHeRbA/profile-displayphoto-shrink_800_800/0/1717699108446?e=1724284800&v=beta&t=3w9M2WUEvXNwjhNeIs3OeumdvBGpeTjkmRaOBHZHrns">
         </div>
     </section>
     <section class="Skills-section">
-        <h1 class="sub-headings">MY SKILLS</h1>
+        <h1>MY SKILLS</h1>
         <div class="skills-icons">
             <div class="skill">
                 <i class="fas fa-users skill-icon"></i>
@@ -85,7 +85,65 @@
         </div>
     </section>
     <section class="projects-section">
-        <h1 class="sub-headings">My Projects</h1>
+        <h1 class="sub-headings">My Portfolio Projects</h1>
+        <div class="project-info">
+            <section class="projects-subsection-1">
+                <h3 class="project-heading"><a href="https://gartium.pythonanywhere.com/login">GARTIUM</a></h3>
+                <div class="project-bio">
+                    <p class="Bio">
+                        Gartium is a basic social media website designed  for those in the creative field. This includes art veteran, newcomers and anybody looking for a place to share their art with the world.
+                    </p>
+                    <p class="Bio">
+                        The aim was to develop a website that is a dedicated space for the visual arts while also keeping  user friendly functionality in mind.
+                    </p>
+                    <div class="project-posts">
+                        <img src="images/Gartium home page.jpg" width="500px"/>
+                        <img src="images/homepage screenshot2.jpg" width="500px"/>
+                        <a href="http://www.youtube.com/watch?feature=player_embedded&v=6lv7kM22M4w
+                            " target="_blank"><img src="http://img.youtube.com/vi/6lv7kM22M4w/0.jpg" 
+                            alt="IMAGE ALT TEXT HERE" width="500px" height="280" border="2" /></a>
+                    </div>
+                </div>
+            </section>
+            <section class="projects-subsection-2">
+                <h3 class="project-heading-2"><a href="https://callmejimmy.pythonanywhere.com/">MUSICAL WONDER</a></h3>
+                <div class="project-bio">
+                    <p class="Bio">
+                        This application began as a research project, to explore the inner workings of web applications yet still felt like a rewarding endeavour.
+                    </p>
+                    <p class="Bio">
+                        We found that finding a specific song and what anime it came from was a challenge, thus musical wonder was born.
+                    </p>
+                    <p class="Bio">
+                        Now we can help people find that one anime song but can't really pin down where it's from, or help someone that has heard a song in a specific anime but doesn't really know the name of the song.
+                    </p>
+                    <div class="project-posts">
+                        <img src="images/Screenshot 2024-02-07 150137.jpg" width="500px"/>
+                        <img src="images/Screenshot 2024-02-07 145916.jpg" width="500px"/>
+                        <img src="images/Screenshot 2024-02-07 150255.jpg" width="500px"/>
+                        <img src="images/Screenshot 2024-02-07 150342.jpg" width="500px"/>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </section>
+    <section class="certificates-section">
+        <h1 class="sub-headings">My Certificates</h1>
+        <div class="certificate-info">
+            <section class="certificate-subsection">
+                <h3 class="certificate-heading">Software Engineering Certificate (Back-End Specializations)</h3>
+                <div class="certificate-bio">
+                    <p class="Bio">
+                        This is a joint certificate between Alx and Holberton, awarded for the completion of the alx Full stack software engineering program.
+                    </p>
+                    <div class="certificate-posts">
+                        <a href="images/17-short-specializations-certificate-garnet-matola.png" target="_blank">
+                            <img src="images/17-short-specializations-certificate-garnet-matola.png" width="500px" />
+                        </a>
+                    </div>
+                </div>
+            </section>
+        </div>
     </section>
     <section class="contact-section">
         <h1 id="Contact-heading">CONTACTS</h1>
@@ -95,7 +153,6 @@
                 <p><i class="fas fa-phone"></i> +27 73 668 6126</p>
             </div>
             <div class="social-links">
-                <a href="https://www.instagram.com/itz_garneyy20" target="_blank"><i class="fab fa-instagram"></i></a>
                 <a href="https://www.linkedin.com/in/garnetmatola" target="_blank"><i class="fab fa-linkedin"></i></a>
                 <a href="https://twitter.com/GarnetMatola" target="_blank"><i class="fab fa-twitter"></i></a>
                 <a href="https://github.com/CallmeJimmy18" target="_blank"><i class="fab fa-github"></i></a>
@@ -144,7 +201,7 @@
         })
 
         document.getElementById('projects-button').addEventListener('click', () => {
-            window.location.href = 'projects.html'; // Replace 'projects.html' with the actual path to your projects page
+            window.location.href = 'projects.html';
         });
 
         document.addEventListener("DOMContentLoaded", function() {
@@ -154,12 +211,46 @@
                 entries.forEach(entry => {
                     if (entry.isIntersecting) {
                         entry.target.classList.add('visible');
-                        observer.unobserve(entry.target); // Stop observing once the element is visible
+                        observer.unobserve(entry.target);
                     }
                 });
             }, { threshold: 0.1 });
 
             sections.forEach(section => {
+                observer.observe(section);
+            });
+        });
+
+        document.addEventListener("DOMContentLoaded", function() {
+            const projectSubsections = document.querySelectorAll('.project-info .project-bio');
+
+            const observer = new IntersectionObserver((entries, observer) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('visible');
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, { threshold: 0.3 });
+
+            projectSubsections.forEach(section => {
+                observer.observe(section);
+            });
+        });
+
+        document.addEventListener("DOMContentLoaded", function() {
+            const certificateSubsections = document.querySelectorAll('.certificate-info .certificate-bio');
+
+            const observer = new IntersectionObserver((entries, observer) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('visible');
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, { threshold: 0.1 });
+
+            certificateSubsections.forEach(section => {
                 observer.observe(section);
             });
         });
