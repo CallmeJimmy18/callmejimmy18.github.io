@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact</title>
+    <link rel="stylesheet" href="styles/page1styles.css">
+    <link rel="stylesheet" href="styles/contactstyles.css">
+    <link rel="stylesheet" href="styles/contactmedia.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Montserrat:wght@400;700&display=swap">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <header id="shortcutheader">
+        <h1><a href="index.html" class="shortcut" id="siteName">G A R N E T</a></h1>
+        <div id="menuToggle">&#9776;</div>
+        <div id="shortcuts">
+            <div id="closeMenu">&#8594;</div>
+            <h3 class="shortcut" id="about"><a href="about.html" class="shortcut">ABOUT</a></h3>
+            <h3 class="shortcut active" id="contact"><a href="contact.html" class="shortcut active">CONTACT</a></h3>
+            <h3 class="shortcut" id="packages"><a href="packages.html" class="shortcut">PACKAGES</a></h3>
+        </div>
+    </header>
+    <section id="Contactsection">
+        <h1>GET IN TOUCH:</h1>
+        <div id="Contactbox">
+            <div class="contactdetails">
+                <p>E M A I L: matolagarnet@gmail.com</p>
+                <p>P H O N E: +27 73 668 6126</p>
+
+                <h3>Socials:</h3>
+                <div id="social-icons">
+                    <a href="https://www.facebook.com" target="_blank" class="social-icon">
+                        <i class="fab fa-facebook"></i>
+                    </a>
+                    <a href="https://www.instagram.com" target="_blank" class="social-icon">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                </div>
+            </div>
+            <form id="reachout-form">
+                <label for="user_name">Name:</label>
+                <input type="text" id="user_name" name="user_name" required>
+              
+                <label for="user_email">Email:</label>
+                <input type="email" id="user_email" name="user_email" required>
+              
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" required></textarea>
+              
+                <button type="submit">Send Message</button>
+            </form>
+        </div>
+    </section>
+    <section id="linksection">
+        <div id="Slogan">
+            <p>G A R N E T: Where Quality and Creativity Shine</p>
+        </div>
+        <div id="contacts">
+            <h3>C O N T A C T</h3>
+            <p>E M A I L: matolagarnet@gmail.com</p>
+            <p>P H O N E: +27 73 668 6126</p>
+            <div id="social-icons">
+                <a href="https://www.facebook.com" target="_blank" class="social-icon">
+                    <i class="fab fa-facebook"></i>
+                </a>
+                <a href="https://www.instagram.com" target="_blank" class="social-icon">
+                    <i class="fab fa-instagram"></i>
+                </a>
+            </div>
+        </div>
+        <div id="pages">
+            <p><a href="about.html" style="color: inherit;">A B O U T</a></p>
+            <p><a href="contact.html" style="color: inherit;">GET A QUOTE</a></p>
+            <p><a href="about.html" style="color: inherit;">P A C K A G E S</a></p>
+        </div>
+    </section>
+    <footer id="legal">
+        <p id="copyright">&copy; <span id="year"></span> G A R N E T. All rights reserved.</p>
+        <p id="signiture">DESIGNED & DEVELOPED BY GARNET</p>
+    </footer>
+
+    <script>
+        document.getElementById("menuToggle").addEventListener("click", function() {
+            document.getElementById("shortcuts").classList.toggle("show");
+        });
+    
+        document.getElementById("closeMenu").addEventListener("click", function() {
+            document.getElementById("shortcuts").classList.remove("show");
+        });
+
+        document.addEventListener("DOMContentLoaded", function() {
+            // Select elements to animate
+            const heading = document.querySelector("#Contactsection h1");
+            const contactDetails = document.querySelector(".contactdetails");
+
+            // Add the active class to trigger animations
+            heading.classList.add("active");
+            contactDetails.classList.add("active");
+        });
+    </script>
+</body>
+</html>

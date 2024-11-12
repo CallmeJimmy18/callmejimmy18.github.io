@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About</title>
+    <link rel="stylesheet" href="styles/page1styles.css">
+    <link rel="stylesheet" href="styles/contactstyles.css">
+    <link rel="stylesheet" href="styles/aboutpagestyles.css">
+    <link rel="stylesheet" href="styles/aboutmeadia.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Montserrat:wght@400;700&display=swap">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <header id="shortcutheader">
+        <h1><a href="index.html" class="shortcut" id="siteName">G A R N E T</a></h1>
+        <div id="menuToggle">&#9776;</div>
+        <div id="shortcuts">
+            <div id="closeMenu">&#8594;</div>
+            <h3 class="shortcut active" id="about"><a href="about.html" class="shortcut active">ABOUT</a></h3>
+            <h3 class="shortcut" id="contact"><a href="contact.html" class="shortcut">CONTACT</a></h3>
+            <h3 class="shortcut" id="packages"><a href="packages.html" class="shortcut">PACKAGES</a></h3>
+        </div>
+    </header>
+    <section id="About-section">
+        <h1>ABOUT US</h1>
+        <div id="Info-box">
+            <div id="Aboutbox">
+                <h2>What is GARNET all about?</h2>
+                <p> 
+                    At GARNET, we believe in the power of collaboration. 
+                    Our approach is simple: listen closely to our clients, 
+                    understand their vision, and bring it to life with precision and excellence. 
+                    From the initial concept to the final design, we prioritize open communication, 
+                    ensuring that every detail aligns with the client’s goals.
+                </p>
+
+                <p>
+                    Dedicated to crafting web solutions that reflect each client's unique brand identity, 
+                    blending creativity with functionality. 
+                    We take pride in delivering work that not only meets expectations but often exceeds them, 
+                    creating polished, professional websites that make a lasting impact.
+                </p>
+                
+                <p>
+                    With a commitment to quality and a passion for design, 
+                    our designs transforms ideas into digital experiences that captivate and engage. 
+                    Let us bring your vision to life with the same brilliance and craftsmanship that define the garnet gemstone.
+                </p>
+            </div>
+            <img src="Images/Creating.jpeg" alt="DynamicImage" id="Create-Image">
+        </div>
+
+        <h3>"I like to work closely with clients, in order to perfectly capture thier dream site."
+        <p>- Garnet Matola</p></h3>
+    </section>
+    <section id="linksection">
+        <div id="Slogan">
+            <p>G A R N E T: Where Quality and Creativity Shine</p>
+        </div>
+        <div id="contacts">
+            <h3>C O N T A C T</h3>
+            <p>E M A I L: matolagarnet@gmail.com</p>
+            <p>P H O N E: +27 73 668 6126</p>
+            <div id="social-icons">
+                <a href="https://www.facebook.com" target="_blank" class="social-icon">
+                    <i class="fab fa-facebook"></i>
+                </a>
+                <a href="https://www.instagram.com" target="_blank" class="social-icon">
+                    <i class="fab fa-instagram"></i>
+                </a>
+            </div>
+        </div>
+        <div id="pages">
+            <p><a href="about.html" style="color: inherit;">A B O U T</a></p>
+            <p><a href="contact.html" style="color: inherit;">GET A QUOTE</a></p>
+            <p><a href="about.html" style="color: inherit;">P A C K A G E S</a></p>
+        </div>
+    </section>
+    <footer id="legal">
+        <p id="copyright">&copy; <span id="year"></span> G A R N E T. All rights reserved.</p>
+        <p id="signiture">DESIGNED & DEVELOPED BY GARNET</p>
+    </footer>
+    <script>
+        const images = ["Images/Creating.jpeg", "Images/Anything.jpeg", "Images/You.jpeg", "Images/Like.jpeg"];
+        let currentImageIndex = 0;
+
+        const createImage = document.getElementById("Create-Image");
+
+        createImage.addEventListener("mouseenter", () => {
+            // Start cycling images every 300ms when hovered
+            createImage.cycleInterval = setInterval(() => {
+                currentImageIndex = (currentImageIndex + 1) % images.length;
+                createImage.src = images[currentImageIndex];
+            }, 800);
+        });
+
+        createImage.addEventListener("mouseleave", () => {
+            // Stop cycling images when hover ends and reset to the first image
+            clearInterval(createImage.cycleInterval);
+            createImage.src = images[0];
+            currentImageIndex = 0;
+        });
+
+        document.getElementById("menuToggle").addEventListener("click", function() {
+            document.getElementById("shortcuts").classList.toggle("show");
+        });
+    
+        document.getElementById("closeMenu").addEventListener("click", function() {
+            document.getElementById("shortcuts").classList.remove("show");
+        });
+
+        document.addEventListener("DOMContentLoaded", function() {
+            // Select elements to animate
+            const sectionTitle = document.querySelector("#About-section h1");
+            const aboutBox = document.querySelector("#Aboutbox");
+            const createImage = document.querySelector("#Create-Image");
+            const sectionQuote = document.querySelector("#About-section h3");
+
+            // Add the active class to trigger animations
+            sectionTitle.classList.add("active");
+            aboutBox.classList.add("active");
+            createImage.classList.add("active");
+            sectionQuote.classList.add("active");
+        });
+    </script>
+</body>
+</html>

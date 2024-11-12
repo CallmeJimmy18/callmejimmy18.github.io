@@ -1,0 +1,146 @@
+@media (max-width: 768px) {
+    /* Show menu toggle and close button on smaller screens */
+    #menuToggle {
+        position: relative;
+        display: block;
+        font-size: 24px;
+        margin-right: 40px;
+        cursor: pointer;
+        color: #fdf8f9;
+        z-index: 2;
+    }
+
+    /* Hide the shortcuts by default */
+    #shortcuts {
+        display: none;
+        position: fixed;
+        top: 0;
+        right: 0;
+        margin-top: 0px;
+        margin-right: 0px;
+        width: 200px;
+        height: 100%;
+        background-color: #8eabb3;
+        flex-direction: column;
+        align-items: center;
+        overflow-y: auto;
+        gap: 20px;
+        padding-top: 16px;
+        z-index: 1001;
+    }
+
+    /* Show shortcuts when the menu is opened */
+    #shortcuts.show {
+        display: flex;
+    }
+
+    #closeMenu {
+        display: block;
+        font-size: 24px;
+        cursor: pointer;
+        color: white;
+        align-self: flex-end;
+        margin: 10px;
+    }
+
+    /* Adjust header and font sizes for mobile screens */
+    #shortcutheader #siteName  {
+        font-size: 24px;
+    }
+
+    #shortcuts .shortcut {
+        font-size: 18px;
+    }
+
+    #Contactsection {
+        margin-top: 20%;
+    }
+
+    #Contactsection h1 {
+        font-size: 40px;
+    }
+
+    #Contactbox {
+        flex-direction: column;
+        align-items: center;
+        padding: 20px;
+        height: 105vh;
+    }
+
+    .contactdetails {
+        margin-left: 0;
+        text-align: center;
+    }
+
+    #reachout-form {
+        margin: 0 auto;
+        margin-top: 20px;
+        width: 80%;
+    }
+
+    #linksection {
+        flex-direction: column; /* Stack items vertically */
+        height: auto; /* Adjust height */
+        padding: 20px;
+        gap: 20px;
+        align-items: center; /* Center-align all items */
+    }
+
+    #Slogan {
+        width: 90%;
+        text-align: center; /* Center the slogan text */
+        margin-left: 0; /* Remove left margin */
+    }
+
+    #Slogan p {
+        font-size: 36px; /* Reduce font size */
+    }
+
+    #contacts, #pages {
+        width: 90%; /* Full width */
+        text-align: center; /* Center-align text */
+        margin-top: 20px;
+    }
+
+    #contacts h3, #contacts p, #pages p {
+        font-size: 18px; /* Reduce font size */
+    }
+
+    .social-icon {
+        font-size: 30px; /* Adjust icon size */
+    }
+
+    /* Footer adjustments */
+    #legal {
+        flex-direction: column; /* Stack footer items vertically */
+        height: auto; /* Adjust height */
+        align-items: center; /* Center-align items */
+        padding: 10px 20px;
+        gap: 10px;
+    }
+
+    #legal p {
+        margin: 5px 0; /* Adjust margins */
+        text-align: center; /* Center-align text */
+    }
+}
+
+@media (max-width: 480px) {
+    #Contactsection h1 {
+        font-size: 32px;
+    }
+
+    .contactdetails p,
+    .contactdetails h3 {
+        font-size: 18px;
+    }
+
+    #reachout-form label {
+        font-size: 16px;
+    }
+
+    #reachout-form input,
+    #reachout-form textarea {
+        width: 100%;
+    }
+}

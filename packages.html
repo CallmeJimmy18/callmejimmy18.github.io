@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Packages</title>
+    <link rel="stylesheet" href="styles/page1styles.css">
+    <link rel="stylesheet" href="styles/packagestyles.css">
+    <link rel="stylesheet" href="styles/packagemedia.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Montserrat:wght@400;700&display=swap">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+</head>
+<body>
+    <div id="Packpageoverlay"></div>
+    <header id="shortcutheader">
+        <h1><a href="index.html" class="shortcut" id="siteName">G A R N E T</a></h1>
+        <div id="menuToggle">&#9776;</div>
+        <div id="shortcuts">
+            <div id="closeMenu">&#8594;</div>
+            <h3 class="shortcut" id="about"><a href="about.html" class="shortcut">ABOUT</a></h3>
+            <h3 class="shortcut" id="contact"><a href="contact.html" class="shortcut">CONTACT</a></h3>
+            <h3 class="shortcut active" id="packages"><a href="packages.html" class="shortcut active">PACKAGES</a></h3>
+        </div>
+    </header>
+    <section id="allPackages">
+        <h1>P A C K S</h1>
+        <p class="p1">Elevate your business with a website designed to attract and engage your audience. </p>
+        <p class="p2">Lets find the right package for you:</p>
+        <div id="Packages">
+            <div id="Standardpack" class="packs">
+                <div class="packoverlay" id="stdrdpackoverlay"></div>
+                <h2>S T A N D A R D</h2>
+                <ul>
+                    <li>1 - 2 Pages: Simpified navigation</li>
+                    <li>Custom Design and Colors: Matching Brand</li>
+                    <li>Responsive Layout: Mobile, Desktop</li>
+                    <li>Contact Form Integration</li>
+                    <li>Google Maps Integration</li>
+                    <li>Social Media Links Integrations</li>
+                </ul>
+                <h1>R2,000</h1>
+            </div>
+            <div id="Custompack" class="packs">
+                <div class="packoverlay" id="custompackoverlay"></div>
+                <h2>C U S T O M</h2>
+                <ul>
+                    <li>5 Pages or More: For growing business</li>
+                    <li>Custom Design and Colors: Matching Brand</li>
+                    <li>Responsive Layout: Mobile, Desktop</li>
+                    <li>Contact Form Integration</li>
+                    <li>Staff and Partner Section</li>
+                    <li>Testimonial Section: Build trust</li>
+                    <li>Social Media Links Integrations</li>
+                    <li>Website maintainance and hosting</li>
+                </ul>
+                <h1>R4,500</h1>
+            </div>
+        </div>
+        <button id="Contact-button" onclick="window.location.href='contact.html'">Get a Quote</button>
+    </section>
+
+    <section id="linksection">
+        <div id="Slogan">
+            <p>G A R N E T: Where Quality and Creativity Shine</p>
+        </div>
+        <div id="contacts">
+            <h3>C O N T A C T</h3>
+            <p>E M A I L: matolagarnet@gmail.com</p>
+            <p>P H O N E: +27 73 668 6126</p>
+            <div id="social-icons">
+                <a href="https://www.facebook.com" target="_blank" class="social-icon">
+                    <i class="fab fa-facebook"></i>
+                </a>
+                <a href="https://www.instagram.com" target="_blank" class="social-icon">
+                    <i class="fab fa-instagram"></i>
+                </a>
+            </div>
+        </div>
+        <div id="pages">
+            <p><a href="about.html" style="color: inherit;">A B O U T</a></p>
+            <p><a href="contact.html" style="color: inherit;">GET A QUOTE</a></p>
+            <p><a href="about.html" style="color: inherit;">P A C K A G E S</a></p>
+        </div>
+    </section>
+    <footer id="legal">
+        <p id="copyright">&copy; <span id="year"></span> G A R N E T. All rights reserved.</p>
+        <p id="signiture">DESIGNED & DEVELOPED BY GARNET</p>
+    </footer>
+
+    <script>
+        document.getElementById("menuToggle").addEventListener("click", function() {
+            document.getElementById("shortcuts").classList.toggle("show");
+        });
+    
+        document.getElementById("closeMenu").addEventListener("click", function() {
+            document.getElementById("shortcuts").classList.remove("show");
+        });
+
+        document.addEventListener("DOMContentLoaded", function() {
+    // Select all elements that need to be animated
+            const heading = document.querySelector("#allPackages h1");
+            const p1 = document.querySelector(".p1");
+            const p2 = document.querySelector(".p2");
+            const packs = document.querySelectorAll(".packs");
+            const contactButton = document.querySelector("#Contact-button");
+
+            // Animate everything else on page load
+            heading.classList.add("active");
+            p1.classList.add("active");
+            p2.classList.add("active");
+            packs.forEach(pack => pack.classList.add("active"));
+
+            // Set up IntersectionObserver to detect when the button is in view
+            const observer = new IntersectionObserver((entries, observer) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add("active");
+                        observer.unobserve(entry.target); // Stop observing once animated
+                    }
+                });
+            }, { threshold: 0.5 }); // Trigger when 50% of the button is visible
+
+            // Observe the button
+            observer.observe(contactButton);
+        });
+    </script>
+</body>
+</html>

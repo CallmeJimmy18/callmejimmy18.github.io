@@ -1,0 +1,148 @@
+body {
+    position: relative;
+    margin: 0;
+    width: 100%;
+    background-image: url("../Images/office.jpg");
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+    justify-content: center;
+    align-items: center;
+    font-family: Arial;
+}
+
+#shortcutheader {
+    background-color: #128857c7; /* Adjust as needed */
+}
+
+#shortcutheader #siteName {   
+    font-family: 'Times New Roman';
+    font-weight: bold;
+    color: #ffffff;
+}
+
+#menuToggle,
+#closeMenu {
+    display: none;
+}
+
+#shortcuts {
+    margin-top: 10px;
+    margin-right: 40px;
+    display: flex;
+    gap: 20px;
+    font-family: 'Times New Roman';
+}
+
+#shortcuts .shortcut {
+    cursor: pointer;
+    transition: color 0.3s;
+    color: #f0f0f0;
+    font-weight: bold;
+}
+
+#shortcuts .shortcut.active {
+    color: #04f755; /* Highlight color for the active page */
+    font-weight: bold;
+}
+
+#shortcuts .shortcut:hover {
+    color:#04f755; 
+}
+
+#About-section h1, #Aboutbox, #Create-Image, #About-section h3 {
+    opacity: 0;
+    transform: translateY(20px); /* Slightly shifted down */
+    transition: opacity 1s ease, transform 1s ease;
+}
+
+#About-section {
+    align-items: center;
+    position: relative;
+    margin: 0 auto;
+    margin-top: 10%;
+    margin-bottom: 15%;
+    width: 100%;
+}
+
+#Info-box {
+    display: flex;
+    margin: 0 auto;
+    margin-bottom: 50px;
+    width: 100%;
+    align-items: center;
+    gap: 20px;
+}
+
+#About-section h1 {
+    text-align: center;
+    margin-bottom: 40px;
+    font-size: 50px;
+    font-weight: bold;
+    color: #a1eec1;
+}
+
+#About-section h3 {
+    margin-top: 20%;
+    text-align: center;
+    font-size: 24px;
+    font-family: 'Lucida Handwriting';
+    font-weight: bold;
+    color: #000000;
+}
+
+#Aboutbox {
+    margin: 0 auto;
+    margin-left: 5%;
+    margin-top: 50px;
+    width: 70%;
+    height: auto;
+    background-color: white;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+#Aboutbox h2 {
+    font-size: 30px;
+    font-weight: bold;
+    color: #1d8b5d;
+}
+
+#Aboutbox p {
+    font-size: 18px;
+    font-style: oblique;
+    width: 75%;
+}
+
+#Create-Image {
+    position: absolute;
+    width: 500px;
+    top: 100px;
+    right: 20px;
+    height: 80vh;
+    border-radius: 50%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease;
+}
+
+#Create-Image:hover {
+    transform: scale(1.02);
+}
+
+#About-section h1.active, #Aboutbox.active, #Create-Image.active, #About-section h3.active {
+    opacity: 1;
+    transform: translateY(0); /* Reset to original position */
+}
+
+#linksection {
+    position: relative;
+    background-color: rgb(53, 129, 91);
+    color: #fafafa;
+}
+
+#legal {
+    position: relative;
+    background-color: rgb(36, 94, 65);
+    color: #ffffff;
+}

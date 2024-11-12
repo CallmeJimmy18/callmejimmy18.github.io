@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GARNET</title>
+    <link rel="stylesheet" href="styles/page1styles.css">
+    <linK rel="stylesheet" href="styles/page1media.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Montserrat:wght@400;700&display=swap">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <header id="introHeading">
+        <div id="menuToggle">&#9776;</div>
+        <div id="shortcuts">
+            <div id="closeMenu">&#8594;</div>
+            <h3><a href="about.html" class="shortcut">A B O U T</a></h3>
+            <h3><a href="contact.html" class="shortcut">C O N T A C T</a></h3>
+            <h3><a href="packages.html" class="shortcut">P A C K A G E S</a></h3>
+        </div>
+        <div id="MyName">
+            <h1 id="title">G A R N E T</h1>
+            <P id="subtitle">WEB DESIGN & DEVELOPMENT</P>
+        </div>
+    </header>
+    <section id="Service">
+        <h2 class="sectHeading">P A C K A G E S</h2>
+        <div class="scroll-container">
+            <button class="scroll-btn left" onclick="prevSlide()">&#9664;</button>
+            <div class="slides">
+                <div class="slide">
+                    <div class="Offers" id="standardoffr">
+                        <div class="offersoverlay"></div>
+                        <h2>S T A N D A R D</h2>
+                        <p>The budget-friendly option, ideal for launching your business or brand online. 
+                            This package covers all the essentials needed to establish a strong digital presence, 
+                            providing a professional, user-friendly website at an affordable price. 
+                            It’s designed to help you make a memorable first impression without breaking the bank, 
+                            perfect for startups or small businesses aiming to get off the ground efficiently and effectively.
+                        </p>
+                        <button class="Standardoffrbtn" onclick="window.location.href='packages.html'">SEE MORE</button>
+                    </div>
+                </div>
+                <div class="slide">
+                    <div class="Offers" id="customoffer">
+                        <div class="offersoverlay" id="customoverlay"></div>
+                        <h2>C U S T O M</h2>
+                        <p>
+                            The Custom Package is designed for businesses ready to elevate their online presence with a more comprehensive and personalized website. 
+                            Ideal for growing brands, this package provides a unique, visually aligned experience that captures and communicates your brand identity effectively. 
+                            It’s perfect for businesses looking to engage more deeply with their audience, 
+                            build credibility, and maintain a professional, cohesive look across all devices.
+                        </p>
+                        <button class="customoffrbtn" onclick="window.location.href='packages.html'">SEE MORE</button>
+                    </div>
+                </div>
+            </div>
+            <button class="scroll-btn right" onclick="nextSlide()">&#9654;</button>
+        </div>
+    </section>
+    <section id="developer">
+        <div class="overlay"></div>
+        <h2>A B O U T</h2>
+        <div class="aboutme">
+            <div id="bio">
+                <p>
+                    Providing excellent services, we aim to develop affordable websites designed around your budget, 
+                    ensuring they are not only visually appealing but also functional and user-friendly. 
+                    We focus on delivering a seamless experience tailored to your needs, 
+                    whether you’re looking to enhance brand visibility, 
+                    improve customer engagement, or increase conversions. 
+                    Our goal is to support your business growth with customized solutions, 
+                    timely delivery, and ongoing support to keep your website updated and performing at its best. 
+                </p>
+                <button id="About-button" onclick="window.location.href='about.html'">ABOUT GARNET</button>
+            </div>
+            <img src="Images/b62c16f02d4ce070376f29f7a223dcc5.jpg" alt="webdesign" id="webdesignimage"> 
+        </div>
+    </section>
+    <section id="wecanhelp">
+        <div class="ideabox">
+            <h2>Got something in mind?</h2>
+            <h3>We can bring your idea to life</h3>
+            <p>
+                At GARNET, we prioritize our clients’ vision, 
+                taking the time to understand their ideas and unique goals. 
+                We work closely with each client to ensure their concepts are fully realized, 
+                transforming ideas into polished, professional designs. 
+                By fostering open communication and collaboration, 
+                we make it our mission to deliver results that not only meet but exceed expectations, 
+                replicating their vision with precision and excellence.
+            </p>
+        </div>
+        <img src="Images/sketch1731098994184.jpeg" alt="idea" id="lightbulb">
+    </section>
+    <section id="Contact">
+        <h2>C O N T A C T</h2>
+        <div id="contact-info">
+            <div class="contact-item">
+                <div class="testicon email-testicon"><i class="fas fa-envelope"></i></div>
+                <p>matolagarnet@gmail.com</p>
+            </div>
+            <div class="contact-item">
+                <div class="testicon phone-testicon"><i class="fas fa-phone-alt"></i></div>
+                <p>+27 73 668 6126</p>
+            </div>
+        </div>
+        <form id="reachout-form">
+            <label for="user_name">Name:</label>
+            <input type="text" id="user_name" name="user_name" required>
+          
+            <label for="user_email">Email:</label>
+            <input type="email" id="user_email" name="user_email" required>
+          
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" required></textarea>
+          
+            <button type="submit">Send Message</button>
+        </form>
+    </section>
+    <section id="Testimonials">
+        <div id="qualities">
+            <div class="quality-item">
+                <div class="testicon"><i class="fas fa-check-circle"></i></div>
+                <p>Reliability</p>
+            </div>
+            <div class="quality-item">
+                <div class="testicon"><i class="fas fa-handshake"></i></div>
+                <p>Customer Service</p>
+            </div>
+            <div class="quality-item">
+                <div class="testicon"><i class="fas fa-paint-brush"></i></div>
+                <p>Excellent Designs</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="linksection">
+        <div id="Slogan">
+            <p>G A R N E T: Where Quality and Creativity Shine</p>
+        </div>
+        <div id="contacts">
+            <h3>C O N T A C T</h3>
+            <p>E M A I L: matolagarnet@gmail.com</p>
+            <p>P H O N E: +27 73 668 6126</p>
+            <div id="social-icons">
+                <a href="https://www.facebook.com" target="_blank" class="social-icon">
+                    <i class="fab fa-facebook"></i>
+                </a>
+                <a href="https://www.instagram.com" target="_blank" class="social-icon">
+                    <i class="fab fa-instagram"></i>
+                </a>
+            </div>
+        </div>
+        <div id="pages">
+            <p><a href="about.html" style="color: inherit;">A B O U T</a></p>
+            <p><a href="contact.html" style="color: inherit;">GET A QUOTE</a></p>
+            <p><a href="about.html" style="color: inherit;">P A C K A G E S</a></p>
+        </div>
+    </section>
+    <footer id="legal">
+        <p id="copyright">&copy; <span id="year"></span> G A R N E T. All rights reserved.</p>
+        <p id="signiture">DESIGNED & DEVELOPED BY GARNET</p>
+    </footer>
+    <script>
+        let currentIndex = 0;
+
+        function showSlide(index) {
+            const slides = document.querySelector('.slides');
+            const totalSlides = document.querySelectorAll('.slide').length;
+
+            // Loop to the first or last slide if out of bounds
+            if (index >= totalSlides) {
+                currentIndex = 0;
+            } else if (index < 0) {
+                currentIndex = totalSlides - 1;
+            } else {
+                currentIndex = index;
+            }
+
+            slides.style.transform = `translateX(-${currentIndex * 100}%)`;
+        }
+
+        function nextSlide() {
+            showSlide(currentIndex + 1);
+        }
+
+        function prevSlide() {
+            showSlide(currentIndex - 1);
+        }
+
+        window.onload = function() {
+            const title = document.getElementById('title');
+            const text = title.innerText.split('');
+            title.innerHTML = '';  // Clear the current text
+            
+            // Create a span element for each letter and append it to the h1
+            text.forEach((letter, index) => {
+                const span = document.createElement('span');
+                span.innerText = letter;
+                span.style.opacity = 0;  // Initially set the opacity to 0
+                span.style.display = 'inline-block'; // To allow fade-in animation
+                title.appendChild(span);
+
+                // Apply the fade-in effect with a delay for each letter
+                setTimeout(() => {
+                span.style.transition = 'opacity 0.4s ease';
+                span.style.opacity = 1;
+                }, 160 * index);  // Delay increases for each letter
+            });
+
+            setTimeout(() => {
+                subtitle.style.transition = 'opacity 1s ease, transform 1s ease';
+                subtitle.style.opacity = 1;
+                subtitle.style.transform = 'translateX(0)';
+            }, 160 * text.length);
+        };
+
+        document.getElementById('menuToggle').addEventListener('click', function() {
+            const shortcuts = document.getElementById('shortcuts');
+            shortcuts.classList.toggle('show');  // Toggle the 'show' class to display the menu
+        });
+
+        document.getElementById('closeMenu').addEventListener('click', function() {
+            const shortcuts = document.getElementById('shortcuts');
+            shortcuts.classList.remove('show');  // Remove the 'show' class to hide the menu
+        });
+
+        document.addEventListener("DOMContentLoaded", () => {
+            const elementsToAnimate = document.querySelectorAll('.Offers, .sectHeading'); // Includes sectHeading
+
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach((entry) => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('animate');
+                        observer.unobserve(entry.target); // Stop observing once animation has started
+                    }
+                });
+            }, { threshold: 0.3 });
+
+            elementsToAnimate.forEach((element) => observer.observe(element));
+        });
+
+        document.addEventListener("DOMContentLoaded", function() {
+            const developerSection = document.querySelector("#developer");
+            const bio = document.querySelector("#bio");
+            const aboutButton = document.querySelector("#About-button");
+            const webdesignImage = document.querySelector("#webdesignimage");
+
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach((entry) => {
+                    if (entry.isIntersecting) {
+                        bio.classList.add("active");
+                        aboutButton.classList.add("active");
+                        webdesignImage.classList.add("active");
+                    }
+                });
+            }, { threshold: 0.3 }); // Adjust threshold as needed
+
+            observer.observe(developerSection);
+        });
+
+        document.addEventListener("DOMContentLoaded", function() {
+            const weCanHelpSection = document.querySelector("#wecanhelp");
+            const ideaBox = document.querySelector(".ideabox");
+            const lightbulb = document.querySelector("#lightbulb");
+
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach((entry) => {
+                    if (entry.isIntersecting) {
+                        ideaBox.classList.add("active");
+                        lightbulb.classList.add("active");
+                    }
+                });
+            }, { threshold: 0.3 }); // Adjust threshold if needed
+
+            observer.observe(weCanHelpSection);
+        });
+
+        document.addEventListener("DOMContentLoaded", function() {
+            const qualityItems = document.querySelectorAll(".quality-item");
+
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach((entry) => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add("active");
+                    }
+                });
+            }, { threshold: 0.2 }); // Adjust threshold as desired
+
+            qualityItems.forEach((item) => {
+                observer.observe(item);
+            });
+        });
+
+    </script>
+    <script type="text/javascript" src="https://cdn.emailjs.com/dist/email.min.js"></script>
+    <script type="text/javascript">
+      (function() {
+        emailjs.init("6T7AGO9n_wm31psID"); // Replace with your EmailJS user ID
+      })();
+    </script>
+    <script type="text/javascript">
+        document.getElementById("reachout-form").addEventListener("submit", function(event) {
+          event.preventDefault();
+      
+          emailjs.sendForm("your_service_id", "your_template_id", this)
+            .then(function() {
+              alert("Message sent!");
+            }, function(error) {
+              alert("Failed to send the message. Try again.");
+              console.log(error);
+            });
+        });
+    </script>
+    <script>
+        document.getElementById("year").textContent = new Date().getFullYear();
+    </script>
+</body>
+</html>

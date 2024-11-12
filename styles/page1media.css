@@ -1,0 +1,240 @@
+@media (max-width: 768px) {
+    #shortcuts {
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    /* Turn shortcuts into a side menu on small screens */
+    #shortcuts h3 {
+        font-size: 18px;
+        margin: 5px 0;
+    }
+
+    /* Create a mobile menu toggle button */
+    #menuToggle {
+        display: block;
+        cursor: pointer;
+        font-size: 24px;
+        position: absolute;
+        top: 10px;
+        right: 20px;
+    }
+
+    #closeMenu {
+        display: block;
+        font-size: 30px;
+        color: white;
+        cursor: pointer;
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        z-index: 101;
+    }
+    
+    #closeMenu:hover {
+        color: rgb(116, 255, 243); /* Change color on hover */
+    }
+    
+
+    #shortcuts {
+        display: none;
+        background-color: rgb(69, 88, 92);
+        position: fixed;
+        top: 0;
+        right: 0px;
+        margin-top: 0px;
+        margin-right: 0px;
+        width: 200px;
+        height: 100%;
+        overflow-y: auto;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding-top: 16px;
+        z-index: 100;
+    }
+
+    #shortcuts.show {
+        display: flex;
+    }
+
+    /* Scale down the header title for smaller screens */
+    #MyName h1 { 
+        font-size: 90px; /* Slightly smaller font size */
+        letter-spacing: 5vw;
+    }
+
+    #MyName p {
+        font-size: 16px;
+    }
+
+
+    .sectHeading {
+        font-size: 7vw; /* Larger font for smaller screens */
+    }
+    
+    .Offers {
+        width: 70%; /* Increase width to use more screen space */
+    }
+
+    #standardoffr p {
+        font-size: 18px;
+        font-weight: bold;
+    }
+
+    .scroll-btn {
+        font-size: 2em; /* Reduce button size */
+    }
+
+    .Standardoffrbtn {
+        font-size: 18px;
+        width: 50%;
+    }
+
+    .customoffrbtn {
+        font-size: 18px;
+        width: 50%;
+    }
+
+    #customoffer p {
+        font-size: 18px;
+        font-weight: bold;
+    }
+
+    .aboutme {
+        flex-direction: column;  /* Stacks items vertically on smaller screens */
+        align-items: center;
+    }
+
+    #bio, #webdesignimage {
+        width: 90%;  /* Reduces width on mobile screens */
+    }
+
+    #developer h2 {
+        font-size: 36px;  /* Smaller font size for the header on smaller screens */
+    }
+
+    #bio p {
+        font-size: 20px;  /* Adjust font size for readability on small screens */
+    }
+
+    #About-button {
+        width: 60%;  /* Wider button on smaller screens */
+    }
+
+    #wecanhelp {
+        flex-direction: column; /* Stack items vertically on smaller screens */
+        align-items: center;
+    }
+
+    .ideabox {
+        width: 92%; 
+        height: 65vh;
+        margin-left: 0;
+        margin-top: 5%;
+        text-align: center;
+    }
+
+    #lightbulb {
+        width: 80%; /* Reduce image size on smaller screens */
+        height: 65vh;
+        margin-top: 40px; /* Space between ideabox and image */
+        position: static; /* Align image naturally under ideabox */
+    }
+
+    .ideabox h2 {
+        font-size: 32px; /* Adjust heading font sizes */
+    }
+
+    .ideabox h3 {
+        font-size: 36px;
+    }
+
+    .ideabox p {
+        font-size: 18px;
+    }
+
+    #reachout-form {
+        max-width: 450px;
+    }
+
+    #reachout-form input,
+    #reachout-form textarea {
+    width: 95%;
+    }
+
+    #qualities {
+        flex-direction: column;
+        align-items: center;
+        gap: 50px;
+    }
+
+    .quality-item {
+        font-size: 1.4rem;
+    }
+
+    .testicon {
+        font-size: 45px; 
+    }
+
+    #linksection {
+        flex-direction: column; /* Stack items vertically */
+        height: auto; /* Adjust height */
+        padding: 20px;
+        gap: 20px;
+        align-items: center; /* Center-align all items */
+    }
+
+    #Slogan {
+        width: 90%;
+        text-align: center; /* Center the slogan text */
+        margin-left: 0; /* Remove left margin */
+    }
+
+    #Slogan p {
+        font-size: 36px; /* Reduce font size */
+    }
+
+    #contacts, #pages {
+        width: 90%; /* Full width */
+        text-align: center; /* Center-align text */
+        margin-top: 20px;
+    }
+
+    #contacts h3, #contacts p, #pages p {
+        font-size: 18px; /* Reduce font size */
+    }
+
+    .social-icon {
+        font-size: 30px; /* Adjust icon size */
+    }
+
+    /* Footer adjustments */
+    #legal {
+        flex-direction: column; /* Stack footer items vertically */
+        height: auto; /* Adjust height */
+        align-items: center; /* Center-align items */
+        padding: 10px 20px;
+        gap: 10px;
+    }
+
+    #legal p {
+        margin: 5px 0; /* Adjust margins */
+        text-align: center; /* Center-align text */
+    }
+}
+
+@media (max-width: 480px) {
+    #MyName h1 {
+        font-size: 20vw;
+        letter-spacing: 8vw;
+    }
+
+    #closeMenu {
+        top: 15px;
+        right: 15px; /* Adjust to ensure it's visible in narrow viewports */
+    }
+}

@@ -1,0 +1,165 @@
+body {
+    margin: 0;
+    width: 100%;
+    background-image: url("../Images/contactpageimage.jpg");
+    background-attachment: fixed;
+    justify-content: center;
+    align-items: center;
+    font-family: Arial;
+}
+
+#shortcutheader {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 8vh;
+    padding: 10px 20px;
+    background-color: #47abc4c7;
+    z-index: 1000;
+}
+
+#shortcutheader #siteName {   
+    font-family: 'Times New Roman';
+    font-weight: bold;
+    color: #ffffff;
+}
+
+#menuToggle,
+#closeMenu {
+    display: none;
+}
+
+#shortcuts {
+    margin-top: 10px;
+    margin-right: 40px;
+    display: flex;
+    gap: 20px;
+    font-family: 'Times New Roman';
+}
+
+#shortcuts .shortcut {
+    cursor: pointer;
+    transition: color 0.3s;
+    color: #f0f0f0;
+    font-weight: bold;
+}
+
+#shortcuts .shortcut.active {
+    color: #00ffea;
+}
+
+#shortcuts .shortcut:hover {
+    color: #00ffea;
+}
+
+#Contactsection h1, .contactdetails {
+    opacity: 0;
+    transform: translateY(20px); /* Slightly shifted down */
+    transition: opacity 1s ease, transform 1s ease;
+}
+
+#Contactsection {
+    align-items: center;
+    position: relative;
+    margin: 0 auto;
+    margin-top: 10%;
+    margin-bottom: 10%;
+    width: 100%;
+    z-index: 2;
+}
+
+#Contactsection h1 {
+    text-align: center;
+    margin-bottom: 40px;
+    font-size: 50px;
+    font-weight: bold;
+    color:#044479;
+}
+
+#Contactbox {
+    display: flex;
+    margin: 0 auto;
+    width: 85%;
+    height: 90vh;
+    background-color: rgb(128, 201, 207);
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.contactdetails {
+    margin-top: 10%;
+    margin-left: 5%;
+}
+
+.contactdetails p {
+    font-size: 20px;
+    font-weight: bold;
+    color: white;
+}
+
+.contactdetails h3 {
+    font-size: 24px;
+    font-weight: bold;
+    color: white;
+}
+
+#Contactsection h1.active, .contactdetails.active {
+    opacity: 1;
+    transform: translateY(0); /* Reset to original position */
+}
+
+#reachout-form {
+    margin-right: 5%;
+    width: 590px;
+}
+
+#reachout-form label {
+    display: block;
+    font-weight: bold;
+    margin: 0.5rem 0 0.3rem;
+    color: #333;
+}
+
+#reachout-form input,
+#reachout-form textarea {
+    width: 95%;
+    padding: 0.6rem;
+    margin-bottom: 1.2rem;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 1rem;
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+#reachout-form input:focus,
+#reachout-form textarea:focus {
+    border-color: #046142;
+    box-shadow: 0 0 5px rgba(4, 97, 66, 0.5);
+    outline: none;
+}
+
+#reachout-form button {
+    background-color: #055479; /* Matches icon color */
+}
+
+#reachout-form button:hover {
+    background-color: #097cb1;
+    transform: translateY(-2px);
+}
+
+#linksection {
+    position: relative;
+    z-index: 2;
+    background-color: rgb(122, 166, 170);
+    color: #fafafa;
+}
+
+#legal {
+    position: relative;
+    z-index: 2;
+    background-color: rgb(55, 112, 116);
+    color: #ffffff;
+}
