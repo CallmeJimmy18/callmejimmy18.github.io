@@ -4,7 +4,7 @@
         position: relative;
         display: block;
         font-size: 24px;
-        margin-right: 40px;
+        margin-right: 10px;
         cursor: pointer;
         color: #fdf8f9;
         z-index: 2;
@@ -43,9 +43,14 @@
         margin: 10px;
     }
 
+    #shortcutheader {
+        padding: 0;
+    }
+
     /* Adjust header and font sizes for mobile screens */
     #shortcutheader #siteName  {
         font-size: 24px;
+        margin-left: 10px;
     }
 
     #shortcuts .shortcut {
@@ -62,8 +67,10 @@
     }
 
     #Aboutbox {
-        width: 90%;
-        margin-left: 4px;
+        width: 100%;
+        margin-left: 0;
+        border-radius: 0%;
+        padding: 0;
         margin-top: 20px;
     }
 
@@ -72,7 +79,7 @@
     }
 
     #Aboutbox p {
-        font-size: 18px;
+        font-size: 20px;
         font-style: oblique;
         text-align: center;
         width: 100%;
@@ -80,11 +87,12 @@
 
     #Create-Image {
         position: relative;
-        width: 350px;
+        width: 100%;
+        top: 30px;
+        right: 0;
         margin: 0 auto;
-        margin-left: 20%;
         margin-bottom: 50px;
-        height: 60vh;
+        height: auto;
     }
 
     #About-section h1 {
@@ -98,7 +106,7 @@
     #linksection {
         flex-direction: column; /* Stack items vertically */
         height: auto; /* Adjust height */
-        padding: 20px;
+        /*padding: 20px;*/
         gap: 20px;
         align-items: center; /* Center-align all items */
     }
@@ -132,7 +140,7 @@
         flex-direction: column; /* Stack footer items vertically */
         height: auto; /* Adjust height */
         align-items: center; /* Center-align items */
-        padding: 10px 20px;
+        /*padding: 10px 20px;*/
         gap: 10px;
     }
 
