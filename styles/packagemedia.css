@@ -59,6 +59,7 @@
 
     .packs {
         width: 80%;
+        height: auto;
     }
 
     #allPackages {
@@ -81,14 +82,14 @@
         position: relative;
         margin: 0 auto;
         margin-top: 50px;
-        width: 30%;
+        width: 200px;
         height: 15%;
     }
 
     #linksection {
         flex-direction: column; /* Stack items vertically */
         height: auto; /* Adjust height */
-        padding: 20px;
+        /*padding: 20px;*/
         gap: 20px;
         align-items: center; /* Center-align all items */
     }
@@ -122,7 +123,7 @@
         flex-direction: column; /* Stack footer items vertically */
         height: auto; /* Adjust height */
         align-items: center; /* Center-align items */
-        padding: 10px 20px;
+        /*padding: 10px 20px;*/
         gap: 10px;
     }
 
