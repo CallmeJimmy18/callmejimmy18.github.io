@@ -83,7 +83,7 @@ body {
     display: flex;
     margin: 0 auto;
     width: 85%;
-    height: 90vh;
+    height: auto;
     background-color: rgb(128, 201, 207);
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
@@ -125,8 +125,10 @@ body {
 
 #reachout-form input,
 #reachout-form textarea {
-    width: 95%;
+    width: 100%;
     padding: 0.6rem;
+    padding-left: 0;
+    padding-right: 0;
     margin-bottom: 1.2rem;
     border: 1px solid #ccc;
     border-radius: 6px;
