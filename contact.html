@@ -100,5 +100,24 @@
             contactDetails.classList.add("active");
         });
     </script>
+    <script type="text/javascript" src="https://cdn.emailjs.com/dist/email.min.js"></script>
+    <script type="text/javascript">
+      (function() {
+        emailjs.init("5eluRvabWpc-jZU5f"); // Replace with your EmailJS user ID
+      })();
+    </script>
+    <script type="text/javascript">
+        document.getElementById("reachout-form").addEventListener("submit", function(event) {
+          event.preventDefault();
+      
+          emailjs.sendForm("service_q3uwwml", "template_j61laod", this)
+            .then(function() {
+              alert("Message sent!");
+            }, function(error) {
+              alert("Failed to send the message. Try again.");
+              console.log(error);
+            });
+        });
+    </script>
 </body>
 </html>
