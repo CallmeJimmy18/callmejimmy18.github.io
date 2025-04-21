@@ -1,3 +1,35 @@
+@media (max-width: 1075px) {
+    #mainpacks {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .packagesDiv {
+        width: 90%;
+        height: auto; /* Adjust height so it doesn't overflow on small screens */
+        margin-bottom: 30px;
+    }
+
+    .extrapacksDiv {
+        flex-direction: column; /* Stack maintenance pack elements vertically */
+        width: 90%;
+        height: auto;
+        padding: 20px;
+        align-items: center;
+        text-align: center;
+    }
+
+    .packtitle,
+    .packdetails {
+        width: 100%;
+        margin: 0;
+    }
+
+    .packdetails ul {
+        padding-left: 20px; /* Keep bullets indented */
+    }
+}
+
 @media (max-width: 768px) {
     /* Show menu toggle and close button on smaller screens */
     #menuToggle {
@@ -66,16 +98,46 @@
         margin-top: 25%;
     }
 
-    #allPackages h1 {
+    #packs-heading {
         font-size: 40px;
     }
 
-    #allPackages .p1 {
+    #p1 {
         font-size: 24px;
     }
 
-    #allPackages .p2 {
+    #p2 {
         font-size: 20px;
+    }
+
+    #mainpacks {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .packagesDiv {
+        width: 90%;
+        height: auto; /* Adjust height so it doesn't overflow on small screens */
+        margin-bottom: 30px;
+    }
+
+    .extrapacksDiv {
+        flex-direction: column; /* Stack maintenance pack elements vertically */
+        width: 90%;
+        height: auto;
+        padding: 20px;
+        align-items: center;
+        text-align: center;
+    }
+
+    .packtitle,
+    .packdetails {
+        width: 100%;
+        margin: 0;
+    }
+
+    .packdetails ul {
+        padding-left: 20px; /* Keep bullets indented */
     }
 
     #Contact-button {
@@ -134,12 +196,8 @@
 }
 
 @media (max-width: 480px) {
-    #allPackages h1 {
-        font-size: 32px;
-    }
-
-    #allPackages .p1,
-    #allPackages .p2 {
+    #p1,
+    #p2 {
         font-size: 18px;
     }
 
@@ -147,23 +205,59 @@
         padding: 15px;
     }
 
-    #Standardpack ul,
-    #Custompack ul {
+    #basicpack ul,
+    #standardpack ul,
+    #premiumpack ul {
         margin-left: 10%;
     }
 
-    #Standardpack li,
-    #Custompack li {
-        font-size: 18px;
+    #basicpack li,
+    #standardpack li,
+    #premiumpack li {
+        font-size: 12px;
     }
 
-    #Standardpack h2,
-    #Custompack h2 {
-        font-size: 28px;
+    #mainpacks {
+        flex-direction: column;
+        align-items: center;
     }
 
-    #Standardpack h1,
-    #Custompack h1 {
-        font-size: 32px;
+    #basicpackhdng {
+        font-size: 22px;
+    }
+
+    #standardpackhdng {
+        font-size: 22px;
+    }
+
+    #ecompackhdng {
+        font-size: 20px;
+    }
+
+    #maintncpackhdng {
+        font-size: 22px;
+    }
+
+    .packagesDiv {
+        width: 90%;
+        height: auto; /* Adjust height so it doesn't overflow on small screens */
+        margin-bottom: 30px;
+    }
+
+    .extrapacksDiv {
+        flex-direction: column; /* Stack maintenance pack elements vertically */
+        width: 90%;
+        height: auto;
+        padding: 20px;
+    }
+
+    .packtitle,
+    .packdetails {
+        width: 100%;
+        margin: 0;
+    }
+
+    .packdetails ul {
+        padding-left: 20px; /* Keep bullets indented */
     }
 }
