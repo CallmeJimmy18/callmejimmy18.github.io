@@ -165,17 +165,20 @@
 
         document.addEventListener("DOMContentLoaded", function() {
     // Select all elements that need to be animated
-            const heading = document.querySelector(".packs-heading");
-            const p1 = document.querySelector(".p1");
-            const p2 = document.querySelector(".p2");
-            const packs = document.querySelectorAll(".packs");
+            const heading = document.querySelector("#packs-heading");
+            const p1 = document.querySelector("#p1");
+            const p2 = document.querySelector("#p2");
+            const packs = document.querySelectorAll(".packagesDiv");
+            const extrapacks = document.querySelectorAll(".extrapacksDiv");
             const contactButton = document.querySelector("#Contact-button");
 
-            // Animate everything else on page load
+            // Animate everything else on page 
+            // load
             heading.classList.add("active");
             p1.classList.add("active");
             p2.classList.add("active");
             packs.forEach(pack => pack.classList.add("active"));
+            extrapacks.forEach(extrapack => extrapack.classList.add("active"));
 
             // Set up IntersectionObserver to detect when the button is in view
             const observer = new IntersectionObserver((entries, observer) => {
